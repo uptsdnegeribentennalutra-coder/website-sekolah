@@ -26,6 +26,6 @@ create policy "Admin delete school media" on storage.objects for delete to authe
 
 update public.profil_sekolah
 set peserta_didik=246,jumlah_guru=15,jumlah_tendik=6,rombel=6,
-    tagline='Mendidik Dengan Hati',
+    tagline='Menginspirasi Negeri',
     hero_text='Mendidik, membimbing, dan menginspirasi generasi penerus yang kreatif, berkarakter, berdaya saing, dan berakhlak mulia.'
 where nama_sekolah='UPT SD Negeri 029 Bentenna';
