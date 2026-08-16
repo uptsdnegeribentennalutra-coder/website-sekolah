@@ -1,0 +1,3 @@
+const client=window.supabaseClient;const form=document.getElementById('loginForm'),msg=document.getElementById('msg');
+(async()=>{const {data}=await client.auth.getSession();if(data.session)location.replace('admin.html')})();
+form.addEventListener('submit',async e=>{e.preventDefault();msg.style.display='none';const email=document.getElementById('email').value.trim(),password=document.getElementById('password').value;const {error}=await client.auth.signInWithPassword({email,password});if(error){msg.textContent='Login gagal: '+error.message;msg.style.display='block';return}location.replace('admin.html')});
